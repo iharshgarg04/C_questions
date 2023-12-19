@@ -1,3 +1,8 @@
+#include<stdbool.h>
+#include<stdlib.h>
+#include<stdio.h>
+#include <string.h>
+
 char* removeDuplicateLetters(char* s) {
     int count[26] = {0};
     bool inStack[26] = {false}; 
@@ -31,4 +36,16 @@ char* removeDuplicateLetters(char* s) {
     result[top + 1] = '\0';
 
     return result;
+}
+
+int main(){
+
+    char arr[100];
+    printf("Enter a string: ");
+    fgets(arr,sizeof(arr),stdin);
+
+    char* ans = removeDuplicateLetters(arr);
+    printf("%s",ans);
+       free(ans);
+    return 0;
 }
