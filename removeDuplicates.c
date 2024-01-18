@@ -29,7 +29,7 @@ char* removeDuplicateLetters(char* s) {
         inStack[index] = true;
     }
 
-    char* result = malloc(top + 2);
+    char* result = (char*) malloc(top + 2);
     for (int i = 0; i <= top; i++) {
         result[i] = stack[i];
     }
